@@ -52,7 +52,17 @@ en_fall_2020 %>%
 
 **Prompt:** Create a bar plot of the 10 biggest courses. Order the plot so that courses appear in descending order. You will want to use coord_flip() to make your plot easy to read.
 
+```{r scene 2}
+en_fall_2020 %>% 
+  slice(1:10) %>% 
+  ggplot(aes(x = reorder(course_title, u_grad), y = u_grad)) +
+     geom_col(fill = "steelblue") +
+     ggtitle("Undergrad Enrollment of 10 Largest Harvard Courses") +
+     labs(y = "Course Title", x = "Undergrad Enrollment") +
+     coord_flip()
 
+
+```
 
 
 ### Scene 3
