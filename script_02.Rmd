@@ -58,7 +58,7 @@ en_fall_2020 %>%
   ggplot(aes(x = reorder(course_title, u_grad), y = u_grad)) +
      geom_col(fill = "steelblue") +
      ggtitle("Undergrad Enrollment of 10 Largest Harvard Courses") +
-     labs(y = "Course Title", x = "Undergrad Enrollment") +
+     labs(x = "Course Title", y = "Undergrad Enrollment") +
      coord_flip()
 
 
